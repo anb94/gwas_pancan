@@ -1,0 +1,44 @@
+
+Bootstrap: docker
+From: ubuntu:18.04
+
+%labels
+  maintainer Adam Bennett <anbennett@pm.me>
+  sraToolkit v2.10.0   
+  python3
+  pandas
+  numpy
+
+
+%runscript
+    "$@"
+
+%post
+
+  apt-get update
+  apt-get -y install locales
+  locale-gen en_US.UTF-8
+
+  export LANG=en_US.UTF-8  
+  export LANGUAGE=en_US:en  
+  export LC_ALL=en_US.UTF-8  
+
+
+    apt-get update
+    apt-get --assume-yes install wget tar bzip2 libxml-libxml-perl curl sed python3-pip 
+    pip3 install numpy pandas matplotlib
+
+    cd /
+    wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.8/sratoolkit.2.10.8-ubuntu64.tar.gz
+    tar xzf sratoolkit.2.10.8-ubuntu64.tar.gz
+    rm -rf sratoolkit.2.10.8-ubuntu64.tar.gz
+
+%environment
+    export LANG=en_US.UTF-8  
+    export LANGUAGE=en_US:en  
+    export LC_ALL=en_US.UTF-8  
+
+    export PATH=/sratoolkit.2.10.0-ubuntu64/bin:$PATH
+
+%test
+    
