@@ -1,0 +1,33 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+%post
+    # Update the package manager
+    apt-get update
+    apt-get upgrade -y
+    # Install necessary packages
+    apt install -y python3 python3-pip build-essential software-properties-common wget ubuntu-drivers-common tar bzip2 libxml-libxml-perl curl sed
+    apt-get update
+    apt-get upgrade -y
+    pip3 install --upgrade pip
+    pip3 install numpy pandas scipy matplotlib
+    apt-get update
+    apt-get upgrade -y
+
+    # Change to home directory
+    cd /
+    # Download SRA toolkit from ncbi
+    wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.8/sratoolkit.2.10.8-ubuntu64.tar.gz
+    # Extract the toolkit
+    tar xzf sratoolkit.2.10.8-ubuntu64.tar.gz
+    # Remove the extracted toolkit
+    rm -rf sratoolkit.2.10.8-ubuntu64.tar.gz
+
+    cd /
+    wget -O vscode.deb https://update.code.visualstudio.com/1.50.1/linux-deb-x64/stable 
+    apt install -y /vscode.deb
+
+
+%environment
+    export LC_ALL=C
+    export PATH=/sratoolkit.2.10.8-ubuntu64/bin:$PATH

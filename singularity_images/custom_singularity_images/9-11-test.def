@@ -1,0 +1,21 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+%post
+    # Update the package manager
+    apt-get update
+    apt-get upgrade -y
+    # Install necessary packages
+    apt install -y python3 python3-pip build-essential software-properties-common wget ubuntu-drivers-common tar bzip2 libxml-libxml-perl curl sed
+    apt-get update
+
+     # Change to / directory
+    cd /
+    # Download Pycharm
+    wget https://download.jetbrains.com/python/pycharm-professional-2020.2.3.tar.gz
+    tar xzf pycharm-*.tar.gz -C /opt/
+    cd /opt/pycharm-*/bin
+    # sh pycharm.sh
+
+%environment
+    export LC_ALL=C
