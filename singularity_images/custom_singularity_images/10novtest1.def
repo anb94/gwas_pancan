@@ -4,7 +4,7 @@ From: ubuntu:18.04
 %post
     # install desired software
     apt-get update
-    apt-get install -y gnupg2 gfortran python3 python3-pip build-essential software-properties-common wget ubuntu-drivers-common firefox
+    apt-get install -y gnupg2 gfortran python3 python3-pip build-essential software-properties-common wget ubuntu-drivers-common firefox nano
     wget https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64
     wget http://developer.download.nvidia.com/compute/cuda/10.0/Prod/patches/1/cuda-repo-ubuntu1804-10-0-local-nvjpeg-update-1_1.0-1_amd64.deb
     apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
@@ -42,7 +42,8 @@ From: ubuntu:18.04
     export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
     export PATH=/sratoolkit.2.10.8-ubuntu64/bin:$PATH
     NODE_ENV=development
-    PORT=9000
+    PORT=8888
     ALLOW_HTTP=true
     URL=localhost
     export NODE_ENV PORT ALLOW_HTTP URL
+
