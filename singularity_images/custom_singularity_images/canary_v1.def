@@ -25,12 +25,7 @@ From: ubuntu:18.04
     apt-get install r-base r-base-dev 
 
 
-
-
-
-
-
-    # Change to home directory
+     # Change to home directory
     cd /
     # Download SRA toolkit from ncbi
     wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.8/sratoolkit.2.10.8-ubuntu64.tar.gz
