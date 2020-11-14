@@ -1,4 +1,4 @@
-Bootstrap: docker
+DBootstrap: docker
 From: ubuntu:18.04
 
 %post
