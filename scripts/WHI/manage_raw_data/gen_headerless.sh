@@ -12,7 +12,7 @@ for file in $input_dir/*.txt; do
 echo "Working on file $file..."
 
   #make new file name from old, use sed to substiute suffix
-  name=$(echo $file | sed s/.txt/.csv)
+  name=$(echo $file | sed -s /.txt/.csv)
 
   # get contents of file with no # and store into file
   cat $file | grep -v "^#" > $name
