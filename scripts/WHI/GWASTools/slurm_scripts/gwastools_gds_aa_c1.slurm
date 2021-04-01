@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH --partition=cpu_1d32n
+#SBATCH --nodes=20
 #SBATCH --ntasks-per-node=16
-#SBATCH --time=30:00:00
+#SBATCH --time=24:00:00
 #SBATCH --output=parallel_%j.log     # Standard output and error log
 
 module load intel_compiler
