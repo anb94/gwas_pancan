@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --partition=cpu_1d32n
-#SBATCH --nodes=10
+#SBATCH --partition=cpu_3d8n
+#SBATCH --nodes=8
 #SBATCH --ntasks-per-node=16
 #SBATCH --time=23:00:00
 #SBATCH --output=parallel_%j.log     # Standard output and error log
