@@ -1,0 +1,24 @@
+cat SHAREchr1aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr1aa.txt
+cat SHAREchr2aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr2aa.txt
+cat SHAREchr3aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr3aa.txt
+cat SHAREchr4aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr4aa.txt
+cat SHAREchr5aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr5aa.txt
+cat SHAREchr6aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr6aa.txt
+cat SHAREchr7aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr7aa.txt
+cat SHAREchr8aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr8aa.txt
+cat SHAREchr9aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr9aa.txt
+cat SHAREchr10aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr10aa.txt
+cat SHAREchr11aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr11aa.txt
+cat SHAREchr12aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr12aa.txt
+cat SHAREchr13aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr13aa.txt
+cat SHAREchr14aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr14aa.txt
+cat SHAREchr15aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr15aa.txt
+cat SHAREchr16aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr16aa.txt
+cat SHAREchr17aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr17aa.txt
+cat SHAREchr18aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr18aa.txt
+cat SHAREchr19aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr19aa.txt
+cat SHAREchr20aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr20aa.txt
+cat SHAREchr21aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr21aa.txt
+cat SHAREchr22aa.info | cut -f 1 | cut -d ":" -f 2 > info_positions/SHAREchr22aa.txt
+
+

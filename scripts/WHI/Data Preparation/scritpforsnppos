@@ -1,0 +1,6 @@
+cat shit_formatted_file | cut -f 1 | cut -fd ":" -f 2
+
+cat shit_formatted_file | cut -f 1 | cut -d ":" -f 2
+
+cat SHAREchr1aa.info | cut -f 1 | cut -d ":" -f 2 > test1.txt
+

@@ -1,0 +1,1623 @@
+---
+title: "WHI_GWASTools_GDS"
+author: "anb"
+date: "4/01/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Consent Group 1
+
+## African American
+
+Load scan file into R
+```{r}
+scanfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/pheno_variables/c1_SHARE_AA_pheno.csv"
+```
+
+
+### Chromosome 1
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr1_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr1aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr1aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr1aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr1aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=1, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 2
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr2_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr2aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr2aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr2aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr2aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=2, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 3
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr3_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr3aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr3aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr3aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr3aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=3, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 4
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr4_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr4aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr4aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr4aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr4aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=4, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 5
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr5_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr5aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr5aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr5aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr5aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=5, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 6
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr6_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr6aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr6aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr6aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr6aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=6, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 7
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr7_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr7aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr7aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr7aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr7aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=7, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 8
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr8_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr8aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr8aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr8aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr8aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=8, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 9
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr9_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr9aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr9aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr9aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr9aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=9, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 10
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr10_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr10aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr10aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr10aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr10aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=10, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 11
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr11_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr11aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr11aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr11aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr11aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=11, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 12
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr12_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr12aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr12aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr12aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr12aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=12, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 13
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr13_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr13aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr13aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr13aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr13aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=13, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 14
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr14_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr14aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr14aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr14aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr14aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=14, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+
+### Chromosome 15
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr15_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr15aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr15aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr15aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr15aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=15, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 16
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr16_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr16aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr16aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr16aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr16aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=16, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 17
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr17_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr17aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr17aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr17aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr17aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=17, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+
+### Chromosome 18
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr18_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr18aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr18aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr18aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr18aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=18, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 19
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr19_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr19aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr19aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr19aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr19aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=19, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 20
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr20_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr20aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr20aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr20aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr20aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=20, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 21
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr21_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr21aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr21aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr21aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr21aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=21, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 22
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr22_c1_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr22aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr22aa.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/SHAREchr22aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr22aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=22, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+## Hispanic American
+
+Load scan file into R
+```{r}
+scanfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/pheno_variables/c1_SHARE_HA_pheno.csv"
+```
+
+
+
+### Chromosome 1
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr1_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr1ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr1ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr1ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr1ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=1, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 2
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr2_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr2ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr2ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr2ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr2ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=2, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 3
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr3_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr3ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr3ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr3ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr3ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=3, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 4
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr4_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr4ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr4ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr4ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr4ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=4, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 5
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr5_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr5ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr5ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr5ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr5ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=5, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 6
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr6_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr6ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr6ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr6ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr6ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=6, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 7
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr7_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr7ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr7ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr7ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr7ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=7, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 8
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr8_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr8ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr8ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr8ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr8ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=8, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 9
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr9_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr9ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr9ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr9ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr9ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=9, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 10
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr10_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr10ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr10ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr10ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr10ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=10, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 11
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr11_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr11ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr11ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr11ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr11ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=11, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 12
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr12_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr12ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr12ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr12ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr12ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=12, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 13
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr13_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr13ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr13ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr13ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr13ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=13, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 14
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr14_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr14ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr14ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr14ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr14ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=14, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+
+### Chromosome 15
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr15_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr15ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr15ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr15ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr15ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=15, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 16
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr16_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr16ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr16ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr16ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr16ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=16, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 17
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr17_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr17ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr17ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr17ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr17ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=17, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+
+### Chromosome 18
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr18_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr18ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr18ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr18ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr18ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=18, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 19
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr19_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr19ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr19ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr19ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr19ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=19, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 20
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr20_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr20ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr20ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr20ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr20ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=20, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 21
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr21_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr21ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr21ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr21ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr21ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=21, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 22
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr22_c1_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr22ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr22ha.dose.c1"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/SHAREchr22ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr22ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=22, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+
+# Consent Group 2
+
+## African American
+
+Load scan file into R
+```{r}
+scanfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/pheno_variables/c2_SHARE_AA_pheno.csv"
+```
+
+
+### Chromosome 1
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr1_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr1aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr1aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr1aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr1aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=1, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 2
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr2_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr2aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr2aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr2aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr2aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=2, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 3
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr3_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr3aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr3aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr3aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr3aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=3, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 4
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr4_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr4aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr4aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr4aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr4aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=4, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 5
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr5_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr5aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr5aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr5aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr5aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=5, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 6
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr6_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr6aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr6aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr6aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr6aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=6, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 7
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr7_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr7aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr7aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr7aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr7aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=7, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 8
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr8_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr8aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr8aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr8aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr8aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=8, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 9
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr9_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr9aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr9aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr9aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr9aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=9, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 10
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr10_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr10aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr10aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr10aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr10aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=10, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 11
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr11_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr11aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr11aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr11aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr11aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=11, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 12
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr12_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr12aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr12aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr12aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr12aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=12, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 13
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr13_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr13aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr13aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr13aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr13aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=13, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 14
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr14_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr14aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr14aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr14aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr14aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=14, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+
+### Chromosome 15
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr15_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr15aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr15aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr15aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr15aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=15, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 16
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr16_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr16aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr16aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr16aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr16aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=16, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 17
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr17_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr17aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr17aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr17aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr17aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=17, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+
+### Chromosome 18
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr18_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr18aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr18aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr18aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr18aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=18, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 19
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr19_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr19aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr19aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr19aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr19aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=19, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 20
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr20_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr20aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr20aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr20aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr20aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=20, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 21
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr21_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr21aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr21aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr21aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr21aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=21, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 22
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr22_c2_aa.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr22aa_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr22aa.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c2/SHAREchr22aa.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/aa/SHAREchr22aa_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=22, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+## Hispanic American
+
+Load scan file into R
+```{r}
+scanfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/pheno_variables/c2_SHARE_HA_pheno.csv"
+```
+
+
+
+### Chromosome 1
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr1_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr1ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr1ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr1ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr1ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=1, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 2
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr2_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr2ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr2ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr2ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr2ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=2, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 3
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr3_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr3ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr3ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr3ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr3ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=3, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 4
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr4_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr4ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr4ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr4ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr4ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=4, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 5
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr5_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr5ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr5ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr5ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr5ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=5, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 6
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr6_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr6ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr6ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr6ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr6ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=6, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 7
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr7_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr7ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr7ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr7ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr7ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=7, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 8
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr8_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr8ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr8ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr8ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr8ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=8, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 9
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr9_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr9ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr9ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr9ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr9ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=9, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 10
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr10_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr10ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr10ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr10ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr10ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=10, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 11
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr11_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr11ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr11ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr11ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr11ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=11, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 12
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr12_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr12ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr12ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr12ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr12ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=12, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 13
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr13_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr13ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr13ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr13ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr13ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=13, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 14
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr14_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr14ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr14ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr14ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr14ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=14, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+
+### Chromosome 15
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr15_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr15ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr15ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr15ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr15ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=15, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 16
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr16_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr16ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr16ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr16ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr16ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=16, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 17
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr17_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr17ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr17ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr17ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr17ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=17, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+
+### Chromosome 18
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr18_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr18ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr18ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr18ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr18ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=18, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 19
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr19_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr19ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr19ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr19ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr19ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=19, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 20
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr20_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr20ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr20ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr20ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr20ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=20, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
+### Chromosome 21
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr21_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr21ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr21ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr21ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr21ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=21, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+### Chromosome 22
+Load chromosome files into R:
+
+```{r}
+gdsfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/gdsfiles/chr22_c2_ha.gds"
+snpfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/snpannotfiles/chr22ha_snpannot"
+dosefile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr22ha.dose.c2"
+markfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_2/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c2/SHAREchr22ha.info"
+posfile <- "/home/anbennett2/dbgap_data/WHI/consentgroup_1/phenogeno/geno/746/posfiles/ha/SHAREchr22ha_posfile.csv"
+```
+
+Generate GDS File:
+```{r}
+imputedDosageFile(input.files=c(dosefile, markfile, posfile), filename=gdsfile, chromosome=22, input.type="MaCH", input.dosage=TRUE, 
+file.type="gds",snp.annot.filename=snpfile, scan.annot.filename=scanfile, scan.df=NULL, snp.exclude=NULL, prob.threshold=0.9, verbose=TRUE)
+```
+
+
