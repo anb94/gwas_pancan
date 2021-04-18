@@ -25,3 +25,6 @@ for ((i=1; i<=22; i++)); do
 done
 
 echo "Completed Hispanic American Chromosomes"
+
+
+perl /home/anbennett2/gwas_pancan/scripts/WHI/plink/dose2plink.pl -dose /home/anbennett2/dbgap_data/WHI/combined_consentgroups/geno/WHI_SHARE_aa.genotype/SHAREchr1aa.dose.cb  -info /home/anbennett2/dbgap_data/WHI/combined_consentgroups/geno/WHI_SHARE_aa.genotype/SHAREchr1aa.info -gz 0 -out /home/anbennett2/dbgap_data/WHI/combined_consentgroups/geno/WHI_SHARE_aa.genotype/dose2plinkout/SHAREchr1aa
