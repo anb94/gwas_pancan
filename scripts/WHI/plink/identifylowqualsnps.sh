@@ -2,15 +2,15 @@
 
 # Define environment variables
 ## Define SHARE Root directory:
-WHI_SHARE=$HOME/dbgap_data/WHI/
+WHI_SHARE=$HOME/dbgap_data/WHI
 
 ## Define African American and Hispanic American consent group 1 variables:
-WHI_SHARE_aa_c1=${WHI_SHARE}/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1/
-WHI_SHARE_ha_c1=${WHI_SHARE}/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1/
+WHI_SHARE_aa_c1=${WHI_SHARE}/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_aa.genotype-imputed-data.c1
+WHI_SHARE_ha_c1=${WHI_SHARE}/consentgroup_1/phenogeno/geno/746/phg000592.v1.WHI_SHARE_ha.genotype-imputed-data.c1
 
 ## Define combined consent group directories:
-WHI_SHARE_aa_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_aa.genotype/
-WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/
+WHI_SHARE_aa_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_aa.genotype
+WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype
 
 for ((i=1; i<=22; i++)); do
 echo "Copying Files and Generating low quality SNPs for African Americans"
