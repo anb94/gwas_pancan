@@ -10,7 +10,7 @@ From: ubuntu:18.04
     apt-get update
     apt-get upgrade -y
     pip3 install --upgrade pip
-    pip3 install numpy pandas scipy matplotlib jupyterlab
+    pip3 install numpy pandas
     apt-get update
     apt-get upgrade -y
 
@@ -41,23 +41,23 @@ From: ubuntu:18.04
     ## Change to root directort
     cd /
     ## Download plink2
-    wget http://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20210123.zip
+    wget -O plink2.zip https://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20210416.zip
     ## unzip the file
-    unzip plink2_linux_x86_64_20210123.zip
+    unzip plink2.zip
     ## remove the zip file
-    rm -rf plink2_linux_x86_64_20210123.zip
+    rm -rf plink2.zip
 
-    cd / 
-    git clone https://github.com/anb94/plink-ng.git
-    cd plink-ng/1.9/
-    gcc dose2plink.c -lz -o /dose2plink    
-
+	#cd /
+	curl -O https://raw.githubusercontent.com/anb94/plink-ng/master/1.9/dose2plink.c
+    gcc /dose2plink.c -lz -o /dose2plink
+    mkdir dosetoplink
+    mv /dose2plink /dosetoplink
 
 %environment
     export LC_ALL=C
     export PATH=/sratoolkit.2.10.8-ubuntu64/bin:$PATH
     export PATH=$PATH:/gcta_1.93.2beta/
-    export PATH=$PATH:/plink2_linux_x86_64_20210123/
-    export PATH=$PATH:/dose2plink
+    export PATH=$PATH:/plink2
+    export PATH=$PATH:/dosetoplink
 
     
