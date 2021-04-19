@@ -10,10 +10,12 @@ WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype
 # Directory containing dose2plink script (information on this script in README.md file)
 dose2plink_dir=${HOME}/gwas_pancan/scripts/WHI/plink/
 
+cd "$HOME" 
+
 # Use the dose2plink perl script on African American group:
 for ((i=1; i<=22; i++)); do
     echo "Converting .info and .dose for African American Chromosome ${i}"
-    perl "${dose2plink_dir}"/dose2plink.pl -dose "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.dose.cb -info "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.info -gz 0 -out "${WHI_SHARE_aa_cb}"/dose2plinkout/SHAREchr"${i}"aa
+    ./dose2plink.pl -m 5000 -dose "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.dose.cb -info "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.info -gz 0 -out "${WHI_SHARE_aa_cb}"/dose2plinkout/SHAREchr"${i}"aa
 done
 
 echo "Completed African American Chromosomes"
@@ -21,10 +23,9 @@ echo "Completed African American Chromosomes"
 # Use the dose2plink perl script on Hispanic American group:
 for ((i=1; i<=22; i++)); do
     echo "Converting .info and .dose for Hispanic American Chromosome ${i}"
-    perl "${dose2plink_dir}"/dose2plink.pl -dose "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.dose.cb -info "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.info -gz 0 -out "${WHI_SHARE_ha_cb}"/dose2plinkout/SHAREchr"${i}"ha
+    ./dose2plink -m 5000 -dose "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.dose.cb -info "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.info -gz 0 -out "${WHI_SHARE_ha_cb}"/dose2plinkout/SHAREchr"${i}"ha
 done
 
 echo "Completed Hispanic American Chromosomes"
 
 
-perl /home/anbennett2/gwas_pancan/scripts/WHI/plink/dose2plink.pl -dose /home/anbennett2/dbgap_data/WHI/combined_consentgroups/geno/WHI_SHARE_aa.genotype/SHAREchr1aa.dose.cb  -info /home/anbennett2/dbgap_data/WHI/combined_consentgroups/geno/WHI_SHARE_aa.genotype/SHAREchr1aa.info -gz 0 -out /home/anbennett2/dbgap_data/WHI/combined_consentgroups/geno/WHI_SHARE_aa.genotype/dose2plinkout/SHAREchr1aa
