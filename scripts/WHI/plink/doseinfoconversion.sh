@@ -15,7 +15,7 @@ cd "$HOME"
 # Use the dose2plink perl script on African American group:
 for ((i=1; i<=22; i++)); do
     echo "Converting .info and .dose for African American Chromosome ${i}"
-    ./dose2plink.pl -m 5000 -dose "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.dose.cb -info "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.info -gz 0 -out "${WHI_SHARE_aa_cb}"/dose2plinkout/SHAREchr"${i}"aa
+    ./dose2plink -m 5000 -dose "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.dose.cb -info "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.info -gz 0 -out "${WHI_SHARE_aa_cb}"/dose2plinkout/SHAREchr"${i}"aa
 done
 
 echo "Completed African American Chromosomes"
