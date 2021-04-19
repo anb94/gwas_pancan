@@ -24,7 +24,11 @@ File: qc-checklength.sh
 
 ### Step 4: Conversion of .dose and .info to .pdat and .pfam files
 
-This step requires the use of dose2plink written by Prof. Sarah Medland and can be acquired at http://genepi.qimr.edu.au/staff/sarahMe/mach2merlin/dose2plink.zip.
+This step requires the use of the dose2plink tool originally written by Prof. Sarah Medland (acquired at http://genepi.qimr.edu.au/staff/sarahMe/mach2merlin/dose2plink.zip) and since
+rewritten in C by Christopher Chang https://github.com/chrchang/plink-ng. The version used here is a fork from github.com/chrchang/plink-ng found at https://github.com/anb94/plink-ng.
+
+
+
 
 File: doseinfoconversion.sh
 

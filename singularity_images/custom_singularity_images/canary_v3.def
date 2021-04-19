@@ -6,7 +6,7 @@ From: ubuntu:18.04
     apt-get update
     apt-get upgrade -y
     # Install necessary packages
-    apt install -y python3 python3-pip build-essential software-properties-common wget ubuntu-drivers-common tar bzip2 curl sed plink zip
+    apt install -y python3 python3-pip build-essential software-properties-common wget ubuntu-drivers-common tar bzip2 curl sed plink zip zlib1g-dev
     apt-get update
     apt-get upgrade -y
     pip3 install --upgrade pip
@@ -15,40 +15,49 @@ From: ubuntu:18.04
     apt-get upgrade -y
 
 
-    # Install R & dependencies
 
-
-    # Change to home directory
+    # Installing GCTA
+    ## Change to root directory
     cd /
-    # Download SRA toolkit from ncbi
+    ## Download SRA toolkit from ncbi
     wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.8/sratoolkit.2.10.8-ubuntu64.tar.gz
-    # Extract the toolkit
+    ## Extract the toolkit
     tar -xzf sratoolkit.2.10.8-ubuntu64.tar.gz
-    # Remove the extracted toolkit
+    ## Remove the extracted toolkit
     rm -rf sratoolkit.2.10.8-ubuntu64.tar.gz
 
-
+    # Installing GCTA
+    ## Change to root directory
     cd /
-    # Download
+    # Download the file
     wget https://cnsgenomics.com/software/gcta/bin/gcta_1.93.2beta.zip
-    # Install 
+    # Unzip the file
     unzip gcta_1.93.2beta.zip
     # Remove zip file
     rm -rf gcta_1.93.2beta.zip
 
 
-    cd/
-
+    # Install plink2
+    ## Change to root directort
+    cd /
+    ## Download plink2
     wget http://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20210123.zip
-
+    ## unzip the file
     unzip plink2_linux_x86_64_20210123.zip
-
+    ## remove the zip file
     rm -rf plink2_linux_x86_64_20210123.zip
+
+    cd / 
+    git clone https://github.com/anb94/plink-ng.git
+    cd plink-ng/1.9/
+    gcc dose2plink.c -lz -o /dose2plink    
+
 
 %environment
     export LC_ALL=C
     export PATH=/sratoolkit.2.10.8-ubuntu64/bin:$PATH
     export PATH=$PATH:/gcta_1.93.2beta/
     export PATH=$PATH:/plink2_linux_x86_64_20210123/
+    export PATH=$PATH:/dose2plink
 
     
