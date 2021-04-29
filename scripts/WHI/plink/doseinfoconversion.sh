@@ -18,6 +18,7 @@ for ((i=10; i<=22; i++)); do
     dose2plink -m 7000 -dose "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.dose.cb -info "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.info -gz 0 -out "${WHI_SHARE_aa_cb}"/dose2plinkout/SHAREchr"${i}"aa
 done
 
+
 echo "Completed African American Chromosomes"
 
 # Use the dose2plink to convert Hispanic American group .dose and .info to .pdat and .pfam:
