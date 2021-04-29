@@ -15,7 +15,7 @@ WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype
 # Use the dose2plink to convert African American group .dose and .info to .pdat and .pfam:
 for ((i=10; i<=22; i++)); do
     echo "Converting .info and .dose for African American Chromosome ${i}"
-    dose2plink -m 5000 -dose "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.dose.cb -info "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.info -gz 0 -out "${WHI_SHARE_aa_cb}"/dose2plinkout/SHAREchr"${i}"aa
+    dose2plink -m 7000 -dose "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.dose.cb -info "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.info -gz 0 -out "${WHI_SHARE_aa_cb}"/dose2plinkout/SHAREchr"${i}"aa
 done
 
 echo "Completed African American Chromosomes"
@@ -23,7 +23,7 @@ echo "Completed African American Chromosomes"
 # Use the dose2plink to convert Hispanic American group .dose and .info to .pdat and .pfam:
 for ((i=1; i<=22; i++)); do
     echo "Converting .info and .dose for Hispanic American Chromosome ${i}"
-    dose2plink -m 5000 -dose "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.dose.cb -info "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.info -gz 0 -out "${WHI_SHARE_ha_cb}"/dose2plinkout/SHAREchr"${i}"ha
+    dose2plink -m 7000 -dose "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.dose.cb -info "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.info -gz 0 -out "${WHI_SHARE_ha_cb}"/dose2plinkout/SHAREchr"${i}"ha
 done
 
 echo "Completed Hispanic American Chromosomes"
