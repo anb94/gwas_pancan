@@ -30,6 +30,7 @@ rewritten in C by Christopher Chang https://github.com/chrchang/plink-ng. The ve
 
 
 
-File: doseinfoconversion.sh
+File: doseinfoconversion.sh (using container built from canary_v3.def)
 
-###
+### Step 5: Combine pdat files
+

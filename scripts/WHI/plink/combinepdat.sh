@@ -13,6 +13,7 @@ WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/d
 ## Add the first file into a new pdat file and then append the rest of the fiels without the header
 cat "${WHI_SHARE_aa_cb}"/SHAREchr1aa.pdat > "${WHI_SHARE_aa_cb}"/SHARE_aa.pdat
 for ((i=2; i<=22; i++)); do
+    "Doing SHARE_aa ${i}"
     cat "${WHI_SHARE_aa_cb}"/SHAREchr"${i}"aa.pdat | tail -n +2 >> "${WHI_SHARE_aa_cb}"/SHARE_aa.pdat
 done
 
@@ -20,6 +21,7 @@ done
 ## Add the first file into a new pdat file and then append the rest of the fiels without the header
 cat "${WHI_SHARE_ha_cb}"/SHAREchr1ha.pdat > "${WHI_SHARE_ha_cb}"/SHARE_ha.pdat
 for ((i=2; i<=22; i++)); do
+    "Doing SHARE_ha ${i}"
     cat "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.pdat | tail -n +2 >> "${WHI_SHARE_ha_cb}"/SHARE_ha.pdat
 done
 
