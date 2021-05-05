@@ -28,9 +28,29 @@ This step requires the use of the dose2plink tool originally written by Prof. Sa
 rewritten in C by Christopher Chang https://github.com/chrchang/plink-ng. The version used here is a fork from github.com/chrchang/plink-ng found at https://github.com/anb94/plink-ng.
 
 
-
-
 File: doseinfoconversion.sh (using container built from canary_v3.def)
 
 ### Step 5: Combine pdat files
+
+This step will combine the pdat files for each chromosome into a single file.
+
+File: combinepdat.sh
+
+### Step 6: Combine low quality snps
+
+The low quality snp files created in step 2 will be combined into a single file for each group and threshold.
+
+File: combinelowqualnp.sh
+
+### Step 7: Identification of shared SNPs
+
+
+
+### Step 8: Download Reference Genome & Extract RSID
+
+A reference genome is needed to add a unique RSID to SNPs in later steps.
+
+File: getrefgenome.sh
+
+### Step 9:
 
