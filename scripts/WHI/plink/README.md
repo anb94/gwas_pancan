@@ -42,15 +42,12 @@ The low quality snp files created in step 2 will be combined into a single file 
 
 File: combinelowqualnp.sh
 
-### Step 7: Identification of shared SNPs
 
-
-
-### Step 8: Download Reference Genome & Extract RSID
+### Step 7: Download Reference Genome & Extract RSID
 
 A reference genome is needed to add a unique RSID to SNPs in later steps.
 
 File: getrefgenome.sh
 
-### Step 9:
+### Step 8:
 
