@@ -36,18 +36,23 @@ This step will combine the pdat files for each chromosome into a single file.
 
 File: combinepdat.sh
 
-### Step 6: Combine low quality snps
+### Step 6: Combine low quality SNPs
 
 The low quality snp files created in step 2 will be combined into a single file for each group and threshold.
 
 File: combinelowqualnp.sh
 
+### Step 7: Identification of shared SNPs
 
-### Step 7: Download Reference Genome & Extract RSID
+SNPs that are common between share_aa and share_ha will be identified and saved to an output file in this step.
+
+File: idsharedsnps.sh
+
+### Step 8: Download Reference Genome & Extract RSID
 
 A reference genome is needed to add a unique RSID to SNPs in later steps.
 
 File: getrefgenome.sh
 
-### Step 8:
+### Step 9:
 
