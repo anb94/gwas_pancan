@@ -6,6 +6,13 @@ library(GWASTools)
 
 scanfile <- "/home/anbennett2/analysis/pheno_geno_files/WHI_SHARE/pheno_variables/c1_SHARE_AA_pheno.csv"
 
+chromosomes = [x for x in range(1,24)]
+
+for chrom in chromosomes:
+    gds = f"mystring_with_a_{chrom}"
+
+    impuytedthing(chromosome=chrom)
+
 
 
 ### Chromosome 1

@@ -54,5 +54,9 @@ A reference genome is needed to add a unique RSID to SNPs in later steps.
 
 File: getrefgenome.sh
 
-### Step 9:
+### Step 9: Generate posfile for info files
+
+In order to extract RSID for these positions, a new column must be added to .info files which contain only chr:position - matching the format of the column in the ref genome file.
+
+
 
