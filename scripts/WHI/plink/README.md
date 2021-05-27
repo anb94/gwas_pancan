@@ -30,11 +30,13 @@ rewritten in C by Christopher Chang https://github.com/chrchang/plink-ng. The ve
 
 File: doseinfoconversion.sh (using container built from canary_v3.def)
 
-### Step 5: Combine pdat files
+### Step 5: Combine pdat files and correct pfam file.
 
-This step will combine the pdat files for each chromosome into a single file.
+This step will combine the pdat files of each chromosome into a single file pdat file. Also, dose2plink creates a pfam for each chromosome, even though all should be identical (as they
+contain an individual's information), therefore, a single will be made for each dataset which is labelled appropriately and corrects the gender of individuals.
 
-File: combinepdat.sh
+
+File: combinepdat.sh correctpfam.sh
 
 ### Step 6: Combine low quality SNPs
 
@@ -50,20 +52,26 @@ File: idsharedsnps.sh
 
 ### Step 8: Download Reference Genome & Extract RSID
 
-A reference genome is needed to add a unique RSID to SNPs in later steps.
+A reference genome is needed to add a unique RSID to SNPs in later steps and is therefore downloaded in this step. 
 
 File: getrefgenome.sh
 
-### Step 9: Generate posfile for info files
+### Step 9: Generate posfile for info files and concatenate
 
 In order to extract RSID for these positions, a new column must be added to .info files which contain only chr:position - matching the format of the column in the ref genome file.
+Output is saved with same file name but .info suffix is replaced with .pos suffix.
 
-File: generateposfile.sh
+File: generateposfile.sh combineposfiles.sh
 
-### Step 10: Generate map file
+### Step 10: 
 
-A MAP file for our dataset must be created for use with PLINK - see https://zzz.bwh.harvard.edu/plink/data.shtml#map 
+A python script is used to extract RSIDs in the order of our dataset so they can be added at a later step.
+
+### Step 11: Generate map file
+
+A MAP file for our dataset (which contains a list of SNPs and their location) must be created for use with PLINK (see https://zzz.bwh.harvard.edu/plink/data.shtml#map).
 
 
 File: generatemap.sh
 
+### Step 12: 
