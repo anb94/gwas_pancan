@@ -10,7 +10,7 @@ WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/
 # The pdat files for each chromosome need to be combined into a single file.
 
 ## African American
-## Add the first file into a new pdat file and then append the rest of the fiels without the header
+## Add the first file into a new pos file and then append the rest of the files without the header
 cat "${WHI_SHARE_aa_cb}"/SHAREchr1aa.pos > "${WHI_SHARE_aa_cb}"/SHARE_aa.pos
 for ((i=2; i<=22; i++)); do
     echo "Doing SHARE_aa ${i}"
@@ -18,7 +18,7 @@ for ((i=2; i<=22; i++)); do
 done
 
 ## Hispanic American
-## Add the first file into a new pdat file and then append the rest of the fiels without the header
+## Add the first file into a new pos file and then append the rest of the files without the header
 cat "${WHI_SHARE_ha_cb}"/SHAREchr1ha.pos > "${WHI_SHARE_ha_cb}"/SHARE_ha.pos
 for ((i=2; i<=22; i++)); do
     echo "Doing SHARE_ha ${i}"

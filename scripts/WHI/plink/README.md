@@ -65,7 +65,10 @@ File: generateposfile.sh combineposfiles.sh
 
 ### Step 10: 
 
-A python script is used to extract RSIDs in the order of our dataset so they can be added at a later step.
+A python script is used to extract RSIDs from the reference genome and be added to the posfile so they can be added to the plink files at a later step.
+
+
+File: getrsid.py
 
 ### Step 11: Generate map file
 

@@ -7,12 +7,13 @@ WHI_SHARE=$HOME/scratch/dbgap_data/WHI
 WHI_SHARE_aa_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_aa.genotype/dose2plinkout
 WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/dose2plinkout
 WHI_SHARE_cb=${WHI_SHARE}/combined_consentgroups/geno
+
 snpdir=$HOME/scratch
-snp_annotations=${snpdir}/snp_annot_grch37_nodups.txt
+snp_annotations=${snpdir}/
 
 # Import dosage and general cleanup using plink2
 plink2 --import-dosage ${WHI_SHARE_aa_cb}/SHARE_ha.pdat \
-	--psam ${WHI_SHARE_aa_cb}/SHAREchr1aa.pfam  \
+	--psam ${WHI_SHARE_aa_cb}/SHARE_aa.pfam  \
 	--exclude ${WHI_SHARE_aa_cb}/lowqualsnps/SHARE_aa_lq03_snps.txt \
 	--update-name ${snp_annotations} 3 6 \
 	--ref-allele ${snp_annotations} 4 3 \
