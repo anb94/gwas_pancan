@@ -58,5 +58,12 @@ File: getrefgenome.sh
 
 In order to extract RSID for these positions, a new column must be added to .info files which contain only chr:position - matching the format of the column in the ref genome file.
 
+File: generateposfile.sh
 
+### Step 10: Generate map file
+
+A MAP file for our dataset must be created for use with PLINK - see https://zzz.bwh.harvard.edu/plink/data.shtml#map 
+
+
+File: generatemap.sh
 
