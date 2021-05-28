@@ -51,7 +51,7 @@ From: ubuntu:18.04
     ## Change to root directort
     cd /
     ## Download plink2
-    wget -O plink2.zip https://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20210416.zip
+    wget -O plink2.zip https://s3.amazonaws.com/plink2-assets/alpha2/plink2_linux_x86_64.zip
     ## unzip the file
     unzip plink2.zip
     ## remove the zip file
