@@ -1,11 +1,12 @@
 # Analysing WHI Data with PLINK
 
-##  Preparing WHI Data for Analysis PLINK 
+## Part 1: Preparing WHI Data for PLINK 
 
 ### Step 1: Combine Consent Groups
 
 The initial step requires the merging of the .dose files for consent groups 1 and 2 for chromosomes 1 to 22. Merging of the .info files is unnecessary due to the fact that they already contain
 information for both consent groups.
+
 
 File: combineconsentgroups.sh
 
@@ -14,11 +15,13 @@ File: combineconsentgroups.sh
 The .info files will be copied to the combined consent group directory for clarity (as they already contain information for both consent groups). 
 Using these copied files, low quality SNPs (one threshold as 0.3 and another with 0.8) with will be identified and stored in the respective files for later use.
 
+
 File: identifylowqualsnps.sh
 
 ### Step 3: Quality Check for Info and Dose Match
 
 The number of rows in the .info file should be equal to the number of columns in the .dose file -1 (due to one column being an identifier for the individual).
+
 
 File: qc-checklength.sh
 
@@ -40,19 +43,22 @@ File: combinepdat.sh correctpfam.sh
 
 ### Step 6: Combine low quality SNPs
 
-The low quality snp files created in step 2 will be combined into a single file for each group and threshold.
+The low quality snp files created in step 2 will be combined into a single file for each threshold per group and then also combined into a single file per group.
+
 
 File: combinelowqualnp.sh
 
 ### Step 7: Identification of shared SNPs
 
-SNPs that are common between share_aa and share_ha will be identified and saved to an output file in this step.
+SNPs that are common between SHARE_aa and SHARE_ha will be identified and saved to an output file in this step.
+
 
 File: idsharedsnps.sh
 
-### Step 8: Download Reference Genome & Extract RSID
+### Step 8: Download Reference Genome & Extract RSID of SNPs
 
 A reference genome is needed to add a unique RSID to SNPs in later steps and is therefore downloaded in this step. 
+
 
 File: getrefgenome.sh
 
@@ -61,13 +67,13 @@ File: getrefgenome.sh
 In order to extract RSID for these positions, a new column must be added to .info files which contain only chr:position - matching the format of the column in the ref genome file.
 Output is saved with same file name but .info suffix is replaced with .pos suffix.
 
+
 File: generateposfile.sh combineposfiles.sh
 
 ### Step 10: 
 
 A python script is used to extract RSIDs from the reference genome and be added to the posfile so they can be added to the plink files at a later step. The output is saved as a new
 file; SHARE_aa_rsid.txt and SHARE_ha_rsid.txt
-
 
 
 File: getrsid.py
@@ -80,3 +86,8 @@ A MAP file for our dataset (which contains a list of SNPs and their location) mu
 File: generatemap.sh
 
 ### Step 12: 
+
+## Part 2: Analysis Using PLINK
+
+### Step 1: Import .pdat files to plink2
+
