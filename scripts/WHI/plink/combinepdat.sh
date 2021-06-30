@@ -24,4 +24,3 @@ for ((i=2; i<=22; i++)); do
     echo "Doing SHARE_ha ${i}"
     cat "${WHI_SHARE_ha_cb}"/SHAREchr"${i}"ha.pdat | tail -n +2 >> "${WHI_SHARE_ha_cb}"/SHARE_ha.pdat
 done
-

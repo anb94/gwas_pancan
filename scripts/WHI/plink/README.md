@@ -55,7 +55,7 @@ SNPs that are common between SHARE_aa and SHARE_ha will be identified and saved 
 
 File: idsharedsnps.sh
 
-### Step 8: Download Reference Genome & Extract RSID of SNPs
+### Step 8: Download Reference Genome & Extract the RSID of the SNPs
 
 A reference genome is needed to add a unique RSID to SNPs in later steps and is therefore downloaded in this step. 
 
@@ -70,7 +70,7 @@ Output is saved with same file name but .info suffix is replaced with .pos suffi
 
 File: generateposfile.sh combineposfiles.sh
 
-### Step 10: 
+### Step 10: Extract RSID of Data
 
 A python script is used to extract RSIDs from the reference genome and be added to the posfile so they can be added to the plink files at a later step. The output is saved as a new
 file; SHARE_aa_rsid.txt and SHARE_ha_rsid.txt
@@ -89,5 +89,9 @@ File: generatemap.sh
 
 ## Part 2: Analysis Using PLINK
 
-### Step 1: Import .pdat files to plink2
+### Step 1: Import dosage .pdat files to plink2
+
+For use in plink, the dosage files need to be imported into plink2 format.
+
+File: plink2-importdosage.sh
 

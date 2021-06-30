@@ -32,4 +32,3 @@ SHARE_ha_rsid.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgr
 
 #SHARE_aa_rsid = pd.read_csv("/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/geno/WHI_SHARE_aa.genotype/SHARE_aa_rsid.txt", sep="\t", comment='#')
 #SHARE_ha_rsid = pd.read_csv("/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/geno/WHI_SHARE_ha.genotype/SHARE_ha_rsid.txt", sep="\t", comment='#')
-
