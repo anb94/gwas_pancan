@@ -9,7 +9,7 @@ WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype
 
 # This still will need to be performed on a machine which has installed dose2plink.c 
 # This can be acquired at https://github.com/anb94/plink-ng
-# Alternatively, a singularity definition file which includes dose2plink.c can be found at ------
+# Alternatively, a singularity definition file which includes dose2plink.c can be found at https://github.com/anb94/gwas_pancan/blob/master/singularity_images/custom_singularity_images/canary_v4.def
 
 
 # Use the dose2plink to convert African American group .dose and .info to .pdat and .pfam:

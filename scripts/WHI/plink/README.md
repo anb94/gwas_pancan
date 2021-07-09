@@ -95,3 +95,4 @@ For use in plink, the dosage files need to be imported into plink2 format.
 
 File: plink2-importdosage.sh
 
+### Step 2: 
