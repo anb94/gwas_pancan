@@ -219,25 +219,33 @@ c2_SHARE_HA_pheno['sex'] = 'F'
 
 ## Rename dbgap sample id to scanid
 
-c1_SHARE_AA_pheno = c1_SHARE_AA_pheno.rename(columns={"dbGaP_Sample_ID": "scanID"})
-c1_SHARE_HA_pheno = c1_SHARE_HA_pheno.rename(columns={"dbGaP_Sample_ID": "scanID"})
+c1_SHARE_AA_pheno = c1_SHARE_AA_pheno.rename(columns={"dbGaP_Sample_ID": "FIID"})
+c1_SHARE_HA_pheno = c1_SHARE_HA_pheno.rename(columns={"dbGaP_Sample_ID": "FIID"})
 
-c2_SHARE_AA_pheno = c2_SHARE_AA_pheno.rename(columns={"dbGaP_Sample_ID": "scanID"})
-c2_SHARE_HA_pheno = c2_SHARE_HA_pheno.rename(columns={"dbGaP_Sample_ID": "scanID"})
+c2_SHARE_AA_pheno = c2_SHARE_AA_pheno.rename(columns={"dbGaP_Sample_ID": "FIID"})
+c2_SHARE_HA_pheno = c2_SHARE_HA_pheno.rename(columns={"dbGaP_Sample_ID": "FIID"})
 
 # Combine the consent groups
 
 cb_SHARE_AA_pheno = pd.concat([c1_SHARE_AA_pheno, c2_SHARE_AA_pheno], axis=0)
 cb_SHARE_HA_pheno = pd.concat([c1_SHARE_HA_pheno, c2_SHARE_HA_pheno], axis=0)
 
-# Output dataframes
-## for use
+# Output dataframes for use in later analyses.
 
-c1_SHARE_AA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/c1_SHARE_AA_pheno.csv', sep='\t', index=False)
-c1_SHARE_HA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/c1_SHARE_HA_pheno.csv', sep='\t', index=False)
+c1_SHARE_AA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/c1_SHARE_AA_pheno_full.csv', sep='\t', index=False)
+c1_SHARE_HA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/c1_SHARE_HA_pheno_full.csv', sep='\t', index=False)
 
-c2_SHARE_AA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/c2_SHARE_AA_pheno.csv', sep='\t', index=False)
-c2_SHARE_HA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/c2_SHARE_HA_pheno.csv', sep='\t', index=False)
+c2_SHARE_AA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/c2_SHARE_AA_pheno_full.csv', sep='\t', index=False)
+c2_SHARE_HA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/c2_SHARE_HA_pheno_full.csv', sep='\t', index=False)
 
-cb_SHARE_AA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/cb_SHARE_AA_pheno.csv', sep='\t', index=False)
-cb_SHARE_HA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/cb_SHARE_HA_pheno.csv', sep='\t', index=False)
+cb_SHARE_AA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/cb_SHARE_AA_pheno_full.csv', sep='\t', index=False)
+cb_SHARE_HA_pheno.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/cb_SHARE_HA_pheno_full.csv', sep='\t', index=False)
+
+
+# Create new df with only covariates
+
+SHARE_aa_covar = cb_SHARE_AA_pheno[["FIID", "FIID", "AGE", "HISTORY_DIABETES", "PANCREATITIS", "MEAN_BMI", "MEAN_WHR"]].copy()
+SHARE_ha_covar = cb_SHARE_HA_pheno[["FIID", "FIID", "AGE", "HISTORY_DIABETES", "PANCREATITIS", "MEAN_BMI", "MEAN_WHR"]].copy()
+
+SHARE_aa_covar.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/SHARE_aa_covar.csv', sep='\t', index=False)
+SHARE_ha_covar.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/pheno/plink/SHARE_ha_covar.csv', sep='\t', index=False)

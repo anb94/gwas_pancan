@@ -43,7 +43,8 @@ File: combinepdat.sh correctpfam.sh
 
 ### Step 6: Generate Phenotype data
 
-The phenotype data for the dataset must be extracted from the forms provided by dbGaP and 
+The phenotype data for the dataset must be extracted from the forms provided by dbGaP and put in a format accepted by plink and other tools. Additionally, we will isolate covariates
+used in the analysis during this process.
 
 
 File: generatephenodata.py
