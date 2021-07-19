@@ -79,5 +79,5 @@ ha_pfam = newdf_ha[['famID', 'IID', 'IDoF', 'IDoM', 'SEX', 'Pheno']]
 
 # Export the files as pfam
 
-aa_pfam.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/geno/SHARE_aa.pfam', sep='\t', index=False, header=False)
-ha_pfam.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/geno/SHARE_ha.pfam', sep='\t', index=False, header=False)
+aa_pfam.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/geno/SHARE_aa.pfam', sep=' ', index=False, header=False)
+ha_pfam.to_csv('/home/anbennett2/scratch/dbgap_data/WHI/combined_consentgroups/geno/SHARE_ha.pfam', sep=' ', index=False, header=False)

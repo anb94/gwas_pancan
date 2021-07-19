@@ -5,7 +5,7 @@ WHI_SHARE=$HOME/scratch/dbgap_data/WHI
 
 ## Define combined consent group directories:
 
-WHI_SHARE_cb_geno=${WHI_SHARE}/combined_consentgroups/geno/
+WHI_SHARE_cb_geno=${WHI_SHARE}/combined_consentgroups/geno
 
 WHI_SHARE_aa_cb=${WHI_SHARE_cb_geno}/WHI_SHARE_aa.genotype
 WHI_SHARE_aa_dose2plink=${WHI_SHARE_aa_cb}/dose2plinkout
