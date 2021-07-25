@@ -11,9 +11,9 @@ WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/p
 
 # Investigate missingness per individual and per SNP and make histograms.
 echo "Investigating missingness per individuals for african american"
-plink2 --pfile "${WHI_SHARE_aa_cb}"/SHARE_aa_temp_updated --missing
+plink2 --pfile "${WHI_SHARE_aa_cb}"/WHI_SHARE_aa_temp_updated --missing
 echo "Investigating missingness per individuals for hispanic american"
-plink2 --pfile "${WHI_SHARE_ha_cb}"/SHARE_ha_temp_updated --missing
+plink2 --pfile "${WHI_SHARE_ha_cb}"/WHI_SHARE_ha_temp_updated --missing
 # output: plink.imiss and plink.lmiss, these files show respectively the proportion of missing SNPs per individual and the proportion of missing individuals per SNP.
 
 
