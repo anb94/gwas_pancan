@@ -101,13 +101,13 @@ A MAP file for our dataset (which contains a list of SNPs and their location) mu
 
 File: generatemap.sh
 
-### Step 12: 
 
 ## Part 2: Analysis Using PLINK
 
 ### Step 1: Import dosage .pdat files to plink2
 
 For use in plink, the dosage files need to be imported into plink2 format.
+
 
 File: plink2-importdosage.sh
 
@@ -118,3 +118,12 @@ present within the pvar file.
 
 
 File: correctpfiles.sh
+
+### Step: PLINK QC
+
+The first steps of the quality control must be performed to remove missing and poor quality data.
+
+
+File: plink2-qc.sh
+
+### Step
