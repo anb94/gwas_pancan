@@ -4,7 +4,7 @@
 ## Define SHARE Root directory:
 WHI_SHARE=$HOME/scratch/dbgap_data/WHI
 ## Define combined consent group directories:
-WHI_SHARE_aa_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_aa.genotype/plin2kout
+WHI_SHARE_aa_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_aa.genotype/plink2out
 WHI_SHARE_ha_cb=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/plink2out
 
 
@@ -27,3 +27,6 @@ awk 'BEGIN{FS="\t";OFS="\t"}{print $6,$7,$3,$4,$5}' WHI_SHARE_ha_temp_w_chrpos.p
 # Copy the other pfiles with a matching name so that plink2 knows they are together.
 cp "${WHI_SHARE_ha_cb}"/WHI_SHARE_ha_temp.psam "${WHI_SHARE_ha_cb}"/WHI_SHARE_ha_temp_updated.psam
 cp  "${WHI_SHARE_ha_cb}"/WHI_SHARE_ha_temp.pgen "${WHI_SHARE_ha_cb}"/WHI_SHARE_ha_temp_updated.pgen
+
+
+$HOME/scratch/dbgap_data/WHI/combined_consentgroups/geno/WHI_SHARE_aa.genotype/plin2kout
