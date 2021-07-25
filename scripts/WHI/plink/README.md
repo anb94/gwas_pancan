@@ -111,4 +111,10 @@ For use in plink, the dosage files need to be imported into plink2 format.
 
 File: plink2-importdosage.sh
 
-### Step 2: 
+### Step 2: Correct pfiles
+
+Once the files have been imported into plink format the chromosome and position information must be updated as they are currently null. To do this we will use information that is
+present within the pvar file.
+
+
+File: correctpfiles.sh
