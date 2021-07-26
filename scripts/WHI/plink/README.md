@@ -124,6 +124,6 @@ File: correctpfiles.sh
 The first steps of the quality control must be performed to remove missing and poor quality data.
 
 
-File: plink2-qc.sh
+File: plink2-qc.sh 
 
 ### Step
