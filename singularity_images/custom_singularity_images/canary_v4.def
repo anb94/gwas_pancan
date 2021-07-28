@@ -14,8 +14,6 @@ From: ubuntu:18.04
     apt-get update
     apt-get upgrade -y
 
-
-
     # Installing GCTA
     ## Change to root directory
     cd /
