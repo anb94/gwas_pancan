@@ -5,7 +5,7 @@
 WHI_SHARE=$HOME/scratch/dbgap_data/WHI
 ## Define combined consent group directories:
 WHI_SHARE_aa_cb_p2o=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_aa.genotype/plink2out
-WHI_SHARE_ha_cb_p20=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/plink2out
+WHI_SHARE_ha_cb_p2o=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/plink2out
 rscripts=$HOME/gwas_pancan/scripts/WHI/plink
 
 ### Step 1 ### 
