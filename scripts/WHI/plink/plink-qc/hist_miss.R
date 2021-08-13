@@ -2,7 +2,7 @@
 sample_miss<-read.table(file="plink2.smiss", header=TRUE)
 variant_miss<-read.table(file="plink2.vmiss", header=TRUE)
 
-pdf("histsmiss.pdf") 
+pdf("histsmiss.pdf")
 hist(snpmiss[,6],main="Histogram of Sample missingness") # Selects column 6 (F_MISS)
 
 
