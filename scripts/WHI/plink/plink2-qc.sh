@@ -2,19 +2,19 @@
 
 # Define environment variables
 ## Define SHARE Root directory:
-WHI_SHARE=$HOME/anbennett2/scratch/datasets/processed_data/WHI_SHARE
+WHI_SHARE=$HOME/scratch/datasets/processed_data/WHI_SHARE
 ## Define combined consent group directories:
 WHI_SHARE_aa_cb_p2o=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_aa.genotype/plink2out
 WHI_SHARE_ha_cb_p2o=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/plink2out
-rscripts=$HOME/gwas_pancan/scripts/WHI/plink
+#rscripts=$HOME/gwas_pancan/scripts/WHI/plink
 
 ### Step 1 ###
 
 # Investigate missingness per individual and per SNP and make histograms.
 echo "Investigating missingness per individuals for african american"
-plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_updated --missing
+plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_updated --missing --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_missing
 echo "Investigating missingness per individuals for hispanic american"
-plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_updated --missing
+plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_updated --missing --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_missing
 # output: plink.imiss and plink.lmiss, these files show respectively the proportion of missing SNPs per individual and the proportion of missing individuals per SNP.
 
 

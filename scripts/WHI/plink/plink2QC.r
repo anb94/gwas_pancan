@@ -95,6 +95,5 @@ legend(0.02,1, xjust=1, yjust=1, legend=levels(relatedness$RT), pch=16, col=c(4,
 
 pdf("hist_relatedness.pdf")
 relatedness = read.table("pihat_min0.2.genome", header=T)
-hist(relatedness[,10],main="Histogram relatedness", xlab= "Pihat")  
-dev.off() 
-
+hist(relatedness[,10],main="Histogram relatedness", xlab= "Pihat")
+dev.off()
