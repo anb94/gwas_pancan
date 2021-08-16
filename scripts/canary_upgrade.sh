@@ -13,4 +13,5 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("GWASTools")
 install.packages("tidyverse")
 q()
+
 exit
