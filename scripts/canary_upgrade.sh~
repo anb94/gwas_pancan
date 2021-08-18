@@ -6,6 +6,12 @@ add-apt-repository "deb http://archive.ubuntu.com/ubuntu/ bionic-backports main 
 apt-get update
 apt-get upgrade -y
 apt-get install -y r-base r-base-dev
-R -e "install.packages('BiocManager'); library('BiocManager'); BiocManager::install('GWASTools')"
-R -e 'install.packages("tidyverse", lib="/usr/local/lib/R/site-library")'
+R --no-save
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("GWASTools")
+install.packages("tidyverse")
+q()
+
 exit
