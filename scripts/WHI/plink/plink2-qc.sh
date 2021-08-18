@@ -55,11 +55,11 @@ plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_4 --mind 0.02 --make-p
 
 # Generate a plot of the MAF distribution.
 plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_5 --freq --out "${WHI_SHARE_aa_cb_p2o}"/MAF_check
-plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_aa_temp_5 --freq --out "${WHI_SHARE_aa_cb_p2o}"/MAF_check
+plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_5 --freq --out "${WHI_SHARE_ha_cb_p2o}"/MAF_check
 # --freq ['zs'] ['counts']
 
 # Use Rscript --no-save MAF_check.R to plot this.
-Rscript --no-save "${rscripts}"/MAF_check.R
+#Rscript --no-save "${rscripts}"/MAF_check.R
 
 # Calculate MAFs. Remove all variants with MAF < 0.05 from the current analysis.
 echo "Delete variants with a minor allele frequency of more than 0.05"

@@ -2,10 +2,10 @@ Bootstrap: docker
 From: ubuntu:18.04
 
 %post
-    # Update the package manager
+  # Update the package manager
     apt-get update
     apt-get upgrade -y
-    # Install necessary packages
+  # Install necessary packages
     apt install -y python3 python3-pip build-essential software-properties-common wget ubuntu-drivers-common tar bzip2 curl sed plink zip zlib1g-dev
     apt-get update
     apt-get upgrade -y
@@ -14,7 +14,7 @@ From: ubuntu:18.04
     apt-get update
     apt-get upgrade -y
 
-    # Installing GCTA
+  # Installing GCTA
     ## Change to root directory
     cd /
     ## Download SRA toolkit from ncbi
@@ -24,7 +24,7 @@ From: ubuntu:18.04
     ## Remove the extracted toolkit
     rm -rf sratoolkit.2.10.8-ubuntu64.tar.gz
 
-    # Installing GCTA
+  # Installing GCTA
     ## Change to root directory
     cd /
     # Download the file
@@ -34,7 +34,7 @@ From: ubuntu:18.04
     # Remove zip file
     rm -rf gcta_1.93.2beta.zip
 
-    # install plink1.9
+  # install plink1.9
     #change to root directory
     cd /
     #download plink1.9
@@ -45,7 +45,7 @@ From: ubuntu:18.04
     rm -rf plink.zip
 
 
-    # Install plink2
+  # Install plink2
     ## Change to root directort
     cd /
     ## Download plink2
@@ -55,19 +55,17 @@ From: ubuntu:18.04
     ## remove the zip file
     rm -rf plink2.zip
 
-	#cd /
-	curl -O https://raw.githubusercontent.com/anb94/plink-ng/master/1.9/dose2plink.c
+  # Download and install dose2plink
+	  #cd /
+    curl -O https://raw.githubusercontent.com/anb94/plink-ng/master/1.9/dose2plink.c
     gcc /dose2plink.c -lz -o /dose2plink
     mkdir dosetoplink
     mv /dose2plink /dosetoplink
 
-    wget https://raw.githubusercontent.com/anb94/gwas_pancan/master/scripts/canary_upgrade.sh
-    chmod +x canary_upgrade.sh
-    
 
 
 
-    # Install R and R packages
+  # Install R and R packages
 
     ln -fs /usr/share/zoneinfo/Europe/London /etc/localtime
     apt-get install -y default-jre openjdk-11-jre-headless openjdk-8-jre-headless default-jdk libcurl4 libcurl4-openssl-dev libxml2-dev libssl-dev
