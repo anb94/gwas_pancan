@@ -27,6 +27,8 @@ From: ubuntu:18.04
   # Installing GCTA
     ## Change to root directory
     cd /
+    mkdir gcta
+    cd gcta
     # Download the file
     wget https://cnsgenomics.com/software/gcta/bin/gcta_1.93.2beta.zip
     # Unzip the file
@@ -37,6 +39,8 @@ From: ubuntu:18.04
   # install plink1.9
     #change to root directory
     cd /
+    mkdir plink1
+    cd plink1
     #download plink1.9
     wget -O plink.zip https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20210416.zip
     #unzip
@@ -48,6 +52,8 @@ From: ubuntu:18.04
   # Install plink2
     ## Change to root directort
     cd /
+    mkdir plink2
+    cd plink2
     ## Download plink2
     wget -O plink2.zip https://s3.amazonaws.com/plink2-assets/alpha2/plink2_linux_x86_64.zip
     ## unzip the file
@@ -56,7 +62,7 @@ From: ubuntu:18.04
     rm -rf plink2.zip
 
   # Download and install dose2plink
-	  #cd /
+	  cd /
     curl -O https://raw.githubusercontent.com/anb94/plink-ng/master/1.9/dose2plink.c
     gcc /dose2plink.c -lz -o /dose2plink
     mkdir dosetoplink
@@ -76,14 +82,14 @@ From: ubuntu:18.04
     apt-get upgrade -y
     apt-get install -y r-base r-base-dev
     R -e "install.packages('BiocManager'); library('BiocManager'); BiocManager::install('GWASTools')"
-    R -e 'install.packages("tidyverse", lib="/usr/local/lib/R/site-library")'
+    R -e 'install.packages(c("tidyverse","qqman"), lib="/usr/local/lib/R/site-library")'
 
 %environment
     export LC_ALL=C
     export PATH=/sratoolkit.2.10.8-ubuntu64/bin:$PATH
-    export PATH=$PATH:/gcta_1.93.2beta/
+    export PATH=$PATH:/gcta
     export PATH=$PATH:/plink2
-    export PATH=$PATH:/plink
+    export PATH=$PATH:/plink1
     export PATH=$PATH:/dosetoplink
     export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
     export TZ=Europe/London

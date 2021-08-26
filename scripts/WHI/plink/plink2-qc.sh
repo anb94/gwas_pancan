@@ -6,6 +6,7 @@ WHI_SHARE=$HOME/scratch/datasets/processed_data/WHI_SHARE
 ## Define combined consent group directories:
 WHI_SHARE_aa_cb_p2o=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_aa.genotype/plink2out
 WHI_SHARE_ha_cb_p2o=${WHI_SHARE}/combined_consentgroups/geno/WHI_SHARE_ha.genotype/plink2out
+WHI_SHARE_pheno=${WHI_SHARE}/combined_consentgroups/pheno/plink
 #rscripts=$HOME/gwas_pancan/scripts/WHI/plink
 
 ### Step 1 ###
@@ -19,7 +20,12 @@ plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_updated --missing --ou
 
 
 # Generate plots to visualize the missingness results.
+cd "${WHI_SHARE_aa_cb_p2o}"
 #Rscript --no-save "${rscripts}"/hist_miss.R
+
+cd "${WHI_SHARE_ha_cb_p2o}"
+#Rscript --no-save "${rscripts}"/hist_miss.R
+
 
 # Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.
 # The following two QC commands will not remove any SNPs or individuals. However, it is good practice to start the QC with these non-stringent thresholds.
@@ -95,13 +101,50 @@ plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_filter_step1 --hwe 1e-
 plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_7 --exclude "${WHI_SHARE_aa_cb_p2o}"/inversion.txt --indep-pairwise 50 5 0.2 --out "${WHI_SHARE_aa_cb_p2o}"/indepSNP
 plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_7 --exclude "${WHI_SHARE_ha_cb_p2o}"/inversion.txt --indep-pairwise 50 5 0.2 --out "${WHI_SHARE_ha_cb_p2o}"/indepSNP
 
-#plink --pfile /WHI_SHARE_aa_temp_7 --extract indepSNP.prune.in --het --out R_check
+
+plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_7 --extract "${WHI_SHARE_aa_cb_p2o}"/indepSNP.prune.in --het --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_R_check
+plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_7 --extract "${WHI_SHARE_ha_cb_p2o}"/indepSNP.prune.in --het --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_R_check
+
 # This file contains the pruned data set.
 
 
 # Plot of the heterozygosity rate distribution
-#Rscript --no-save "${rscripts}"/check_heterozygosity_rate.R
+Rscript --no-save "${rscripts}"/check_heterozygosity_rate.R
 
 
 # The following code generates a list of individuals who deviate more than 3 standard deviations from the heterozygosity rate mean.
-#Rscript --no-save "${rscripts}"/heterozygosity_outliers_list.R
+Rscript --no-save "${rscripts}"/heterozygosity_outliers_list.R
+
+
+# Remove heterozygosity rate outliers.
+plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_7 --remove "${WHI_SHARE_aa_cb_p2o}"/het_fail_ind.txt --make-pgen --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8
+plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_7 --remove "${WHI_SHARE_ha_cb_p2o}"/het_fail_ind.txt --make-pgen --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8
+
+plink2  --pfile  "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --covar "${WHI_SHARE_pheno}"/SHARE_aa_covariates.tsv --make-pgen --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_w_covar
+plink2  --pfile  "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8 --covar "${WHI_SHARE_pheno}"/SHARE_ha_covariates.tsv --make-pgen --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_w_covar
+
+# Relationship estimation based upon make-rel (redundant?)
+#plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --make-rel --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_rel
+#plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8 --make-rel --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_rel
+
+
+#KING relatioship table
+#plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --make-king --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8
+#plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8 --make-king --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8
+
+# Use king cut off to estimate relatedness
+plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --king-cutoff 0.125 --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_9
+plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8 --king-cutoff 0.125 --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9
+
+#Possible cut-off for unrelated individuals? No sure how if 0.125 is second degree relative
+#plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --king-cutoff 0.088 --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_9
+#plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8 --king-cutoff 0.088 --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9
+
+
+# Using the file geneated by king-cutoff remove the samples which are too related
+plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --remove "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_9.king.cutoff.out.id --make-pgen --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_9
+plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8 --remove "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9.king.cutoff.out.id --make-pgen --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9
+
+
+plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_9 --pca approx --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_9_pca
+plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9 --pca approx --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9_pca
