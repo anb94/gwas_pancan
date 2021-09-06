@@ -120,8 +120,6 @@ Rscript --no-save "${rscripts}"/heterozygosity_outliers_list.R
 plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_7 --remove "${WHI_SHARE_aa_cb_p2o}"/het_fail_ind.txt --make-pgen --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8
 plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_7 --remove "${WHI_SHARE_ha_cb_p2o}"/het_fail_ind.txt --make-pgen --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8
 
-plink2  --pfile  "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --covar "${WHI_SHARE_pheno}"/SHARE_aa_covariates.tsv --make-pgen --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_w_covar
-plink2  --pfile  "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8 --covar "${WHI_SHARE_pheno}"/SHARE_ha_covariates.tsv --make-pgen --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_w_covar
 
 # Relationship estimation based upon make-rel (redundant?)
 #plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --make-rel --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_rel
@@ -146,5 +144,9 @@ plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --remove "${WHI_SHAR
 plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8 --remove "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9.king.cutoff.out.id --make-pgen --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9
 
 
+
 plink2 --pfile "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_9 --pca approx --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_9_pca
 plink2 --pfile "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9 --pca approx --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_9_pca
+
+plink2  --pfile  "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_temp_8 --covar "${WHI_SHARE_pheno}"/SHARE_aa_covariates.tsv --make-pgen --out "${WHI_SHARE_aa_cb_p2o}"/WHI_SHARE_aa_w_covar
+plink2  --pfile  "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_temp_8 --covar "${WHI_SHARE_pheno}"/SHARE_ha_covariates.tsv --make-pgen --out "${WHI_SHARE_ha_cb_p2o}"/WHI_SHARE_ha_w_covar

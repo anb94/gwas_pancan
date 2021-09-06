@@ -42,9 +42,40 @@ cov_ha.to_csv("/home/anbennett2/scratch/datasets/processed_data/WHI_SHARE/combin
 
 
 
-
-
-
-
-
 share_aa_covariates = pd.read_csv("/home/anbennett2/scratch/datasets/processed_data/WHI_SHARE/combined_consentgroups/pheno/plink/SHARE_aa_covariates.tsv", sep="\t", comment='#')
+
+
+
+
+share_aa_covariates = pd.read_csv("/home/anbennett2/scratch/datasets/processed_data/WHI_SHARE/combined_consentgroups/geno/WHI_SHARE_aa.genotype/plink2out/WHI_SHARE_aa_w_covar.cov", sep="\t")
+share_aa_eigenvec = pd.read_csv("/home/anbennett2/scratch/datasets/processed_data/WHI_SHARE/combined_consentgroups/geno/WHI_SHARE_aa.genotype/plink2out/WHI_SHARE_aa_temp_9_pca.eigenvec", sep="\t")
+
+
+
+cov_aa = pd.merge(left=share_aa_eigenvec, right=share_aa_covariates, how='left', left_on='IID', right_on='#IID')
+cov_aa = cov_aa[['#FID', 'IID', 'PC1', 'PC2', 'PC3', 'PC4', 'PC5', 'PC6', 'PC7', 'PC8', 'PC9', 'PC10', 'AGE', 'HISTORY_DIABETES', 'PANCREATITIS']]
+
+
+
+
+cov_aa.to_csv("/home/anbennett2/scratch/datasets/processed_data/WHI_SHARE/combined_consentgroups/pheno/plink/SHARE_aa_covariates_pca.tsv", sep='\t', index=False, header=True)
+
+
+
+WHI_SHARE_aa_fin.cov
+
+
+
+
+WHI_SHARE_aa_fin = pd.read_csv("/home/anbennett2/scratch/datasets/processed_data/WHI_SHARE/combined_consentgroups/geno/WHI_SHARE_aa.genotype/plink2out/WHI_SHARE_aa_fin.cov", sep="\t")
+psam_ha = pd.read_csv("/home/anbennett2/scratch/datasets/processed_data/WHI_SHARE/combined_consentgroups/geno/WHI_SHARE_ha.genotype/plink2out/WHI_SHARE_ha_temp_9.psam", sep="\t")
+
+WHI_SHARE_aa_fin[['FID']] = WHI_SHARE_aa_fin[['#IID']].copy()
+WHI_SHARE_aa_fin[['IID']] = WHI_SHARE_aa_fin[['#IID']].copy()
+
+
+WHI_SHARE_aa_fin = WHI_SHARE_aa_fin[['FID', '#IID', 'PC1', 'PC2', 'PC3', 'PC4', 'AGE', 'HISTORY_DIABETES', 'PANCREATITIS']]
+
+
+WHI_SHARE_aa_fin = WHI_SHARE_aa_fin.rename(columns={"#IID": "IID"})
+WHI_SHARE_aa_fin.to_csv("/home/anbennett2/scratch/datasets/processed_data/WHI_SHARE/combined_consentgroups/pheno/plink/WHI_SHARE_aa_fin-b.cov", sep='\t', index=False, header=True)
