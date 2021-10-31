@@ -64,6 +64,7 @@ c2_form80_WHRX=c2_form80.groupby(by='dbGaP_Subject_ID')['WHRX'].mean()
 c2_form80_WHRX=pd.DataFrame(c2_form80_WHRX)
 c2_form80_WHRX.reset_index(inplace=True)
 
+
 # Extract samples from imputed and harmonized data: Use the WHI Sample file from the phenotypes folder to filter for only samples that are in the imputed and harmonized data:
 
 ## Consent group 1
@@ -110,7 +111,7 @@ c2_746_pheno_info_SHARE_HA.reset_index(inplace=True, drop=True)
 c2_746_pheno_info_SHARE_AA = c2_746_pheno_info_SHARE[c2_746_pheno_info_SHARE.SAMPLE_ORIGIN.str.match('SHARE-AA')]
 c2_746_pheno_info_SHARE_AA.reset_index(inplace=True, drop=True)
 
-# - Merge the above filtered dataframes from the WHI Sample and 746 pheno dataframes. This is done with a left join onto the 746_pheno_info_SHARE dfs, as these should contain only those subjects who participated in SHARE. 
+# - Merge the above filtered dataframes from the WHI Sample and 746 pheno dataframes. This is done with a left join onto the 746_pheno_info_SHARE dfs, as these should contain only those subjects who participated in SHARE.
 # The subsequent df will be used later on when appending the phenotype information:
 
 # Consent Group 1
@@ -140,7 +141,7 @@ c2_subject_ID['dbGaP_Subject_ID'] = c2_form2['dbGaP_Subject_ID']
 
 # - Merge the necessary columns to the above dfs:
 
-# Extract and merge the columns needed for consent group 1 
+# Extract and merge the columns needed for consent group 1
 
 c1_mydf = pd.DataFrame()
 c1_mydf['dbGaP_Subject_ID'] = c1_subject_ID['dbGaP_Subject_ID']
@@ -184,8 +185,8 @@ c2_mydf.AGE_DIAGNOSED = c2_mydf.AGE + (c2_mydf.AGE_DIAGNOSED / 365)
 
 ##Convert days till death to age of death in years
 
-c1_mydf.AGE_DIAGNOSED = c1_mydf.AGE + (c1_mydf.AGE_DIAGNOSED / 365)
-c2_mydf.AGE_DIAGNOSED = c2_mydf.AGE + (c2_mydf.AGE_DIAGNOSED / 365)
+c1_mydf.AGE_DEATH = c1_mydf.AGE + (c1_mydf.AGE_DEATH / 365)
+c2_mydf.AGE_DEATH = c2_mydf.AGE + (c2_mydf.AGE_DEATH / 365)
 
 ## Calculate number of months survived with pancreatic cancer
 
