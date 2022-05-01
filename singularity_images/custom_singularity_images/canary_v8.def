@@ -10,11 +10,11 @@ From: ubuntu:18.04
     apt-get update
     apt-get upgrade -y
     pip3 install --upgrade pip
-    pip3 install numpy pandas
+    pip3 install numpy pandas bgen-reader pybgen biopython
     apt-get update
     apt-get upgrade -y
 
-  # Installing GCTA
+  # Installing sra-toolkit
     ## Change to root directory
     cd /
     ## Download SRA toolkit from ncbi
